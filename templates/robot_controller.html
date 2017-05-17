@@ -53,14 +53,12 @@ function turnBackward() {
 </head>
 
 <body>
-  <div class="jumbotron text-center">
-    <h1>Robot Controller</h1>
-    <p>Use the buttons to drive the robot</p>
-  </div>
+ 
+ <div class="container-fluid">
+    <h1 align='center'>Robot Controller</h1>
 
-  <div class="container-fluid">
     <div class="row">
-      <div class="center-block"><p align='center'><iframe height="600" width="600"  src="http://niksrobot.home:8000"></iframe></p></div>
+      <div class="center-block"><p align='center'><iframe height="330px" width="485px"  src="http://niksrobot.home:8000/stream.mjpg"></iframe></p></div>
       <div class="row"  >
             <button class="btn btn-primary btn-lg  center-block" onclick='turnForward();'  type="button" name="Forward" value="Forward">Forward</button>
       </div>

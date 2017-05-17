@@ -17,7 +17,7 @@ def index():
 
 @app.route('/robot_left', methods=['POST'])
 def robot_left():
-    print 'robot_left'
+    #print 'robot_left'
     robot.left(.5)
     sleep(.2)
     robot.stop()
@@ -25,7 +25,7 @@ def robot_left():
 
 @app.route('/robot_right', methods=['POST'])
 def robot_right():
-    print 'robot_right'
+    #print 'robot_right'
     robot.right(.5)
     sleep(.2)
     robot.stop()
@@ -33,7 +33,7 @@ def robot_right():
 
 @app.route('/robot_forward', methods=['POST'])
 def robot_forward():
-    print 'robot_forward'
+    #print 'robot_forward'
     robot.forward(.6)
     sleep(.5)
     robot.stop()  	
@@ -41,7 +41,7 @@ def robot_forward():
 
 @app.route('/robot_backward', methods=['POST'])
 def robot_backward():
-    print 'robot_backward'
+    #print 'robot_backward'
     robot.backward(.6)
     sleep(.5)
     robot.stop()
