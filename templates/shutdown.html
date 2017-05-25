@@ -1,0 +1,21 @@
+<script>
+function powerOff() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("post", "/power_off", true);
+  xhttp.send();
+}
+
+function myFunction() {
+    var txt;
+    if (confirm("Are you Sure you want to Shutdown?") == true) {
+        powerOff();
+        txt = "Shutting Down";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}</script>
+<p> <a href='./robot_controller'>Click here to go back</a></p><br>
+<label>click button to Shutdown Robot</label>
+<button onclick="myFunction()">ShutDown</button>
+
+<p id="demo"></p>
+

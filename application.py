@@ -3,6 +3,8 @@ from gpiozero import Robot
 from gpiozero import Motor
 from functools import wraps
 from time import sleep
+import os
+
 
 app = Flask(__name__)
 
@@ -48,7 +50,10 @@ def robot_backward():
     return 'B'
 
 
-
+@app.route('/power_off', methods=['POST'])
+def powerOff():
+    os.system("sudo shutdown")
+    return 'OFF'
 
 
 
@@ -88,3 +93,7 @@ def robot_backward():
 #@requires_auth
 def robot_controller():
     return render_template('robot_controller.html')
+
+@app.route('/shutdown')
+def shutdown():
+    return render_template('shutdown.html')

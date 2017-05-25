@@ -48,6 +48,12 @@ function turnBackward() {
   xhttp.open("post", "/robot_backward", true);
   xhttp.send();
 }
+
+function powerOff() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("post", "/power_off", true);
+  xhttp.send();
+}
 </script>
 
 </head>
@@ -56,7 +62,7 @@ function turnBackward() {
  
  <div class="container-fluid">
     <h1 align='center'>Robot Controller</h1>
-
+	<h3 align='center'><a href='./shutdown'>Power Off</a></h3>
     <div class="row">
       <div class="center-block"><p align='center'><iframe height="330px" width="485px"  src="http://niksrobot.home:8000/stream.mjpg"></iframe></p></div>
       <div class="row"  >
