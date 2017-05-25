@@ -52,7 +52,7 @@ def robot_backward():
 
 @app.route('/power_off', methods=['POST'])
 def powerOff():
-    os.system("sudo shutdown")
+    os.system("sudo poweroff")
     return 'OFF'
 
 
