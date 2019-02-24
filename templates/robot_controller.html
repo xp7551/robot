@@ -54,6 +54,11 @@ function powerOff() {
   xhttp.open("post", "/power_off", true);
   xhttp.send();
 }
+function fire_gun() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("post", "/fire_gun", true);
+  xhttp.send();
+}
 </script>
 
 </head>
@@ -63,6 +68,7 @@ function powerOff() {
  <div class="container-fluid">
     <h1 align='center'>Robot Controller</h1>
 	<h3 align='center'><a href='./shutdown'>Power Off</a></h3>
+    <label><button type='button' onclick='fire_gun();' >Fire</button></label>
     <div class="row">
       <div class="center-block"><p align='center'><iframe height="330px" width="485px"  src="http://niksrobot.home:8000/stream.mjpg"></iframe></p></div>
       <div class="row"  >
