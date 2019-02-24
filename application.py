@@ -5,7 +5,7 @@ from gpiozero import Robot
 from gpiozero import Motor
 from functools import wraps
 from time import sleep
-from mpu6050 import mpu6050
+#from mpu6050 import mpu6050
 import os
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
